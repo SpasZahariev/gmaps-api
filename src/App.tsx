@@ -1,31 +1,30 @@
 import React from "react";
 import "./App.css";
-import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
+import mapStyles from "./mapStyles";
 
 //to get the script working we need to wrap this in other funs
 function Map() {
   return (
-    <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 42.6977, lng: 23.3219 }}
-    />
+    <LoadScript
+      id="script-loader"
+      googleMapsApiKey={`${process.env.REACT_APP_MAP_API}`}
+    >
+      <GoogleMap
+        id="example-map"
+        zoom={14}
+        center={{
+          lat: 42.6977,
+          lng: 23.3219
+        }}
+      ></GoogleMap>
+    </LoadScript>
   );
 }
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
-
 class App extends React.Component {
   render() {
-    return (
-      <div id="map">
-        <WrappedMap
-          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_MAP_API}`}
-          loadingElement={<div style={{ height: "100%" }} />}
-          containerElement={<div style={{ height: "100%" }} />}
-          mapElement={<div style={{ height: "100%" }} />}
-        />
-      </div>
-    );
+    return <div id="map">{Map()}</div>;
   }
 }
 
