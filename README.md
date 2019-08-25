@@ -1,7 +1,7 @@
-![alt text](https://github.com/SpasZahariev/gmaps-api/tree/master/src/resources/blackStyle.png)
+![alt text](https://github.com/SpasZahariev/gmaps-api/blob/master/src/resources/blackStyle.png "testing")
 
-###Important!
-#To make this work you would need to replace process.env.REACT_APP_MAP_API with your own google maps javascript api
+## Important!
+#### To make this work you would need to replace process.env.REACT_APP_MAP_API with your own google maps javascript api
 
 ## Available Scripts
 
