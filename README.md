@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](https://github.com/SpasZahariev/gmaps-api/tree/master/src/resources/blackStyle.png)
+
+###Important!
+#To make this work you would need to replace process.env.REACT_APP_MAP_API with your own google maps javascript api
 
 ## Available Scripts
 
