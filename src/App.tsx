@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
+const myMapStyles = require("./mapStyles.json");
 
 //to get the script working we need to wrap this in other funs
 function Map() {
   return (
     <GoogleMap
-      defaultZoom={10}
+      defaultZoom={15}
       defaultCenter={{ lat: 42.6977, lng: 23.3219 }}
+      defaultOptions={{ styles: myMapStyles }}
     />
   );
 }
