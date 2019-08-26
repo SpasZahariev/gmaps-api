@@ -1,7 +1,9 @@
 ![alt text](https://github.com/SpasZahariev/gmaps-api/blob/master/src/resources/blackStyle.png "testing")
 
+## Now deployed to heroku: https://gmaps-api-test.herokuapp.com/
+
 ## Important!
-#### To make this work you would need to replace process.env.REACT_APP_MAP_API with your own google maps javascript api key
+#### To make this work locally you would need to replace process.env.REACT_APP_MAP_API with your own google maps javascript api key
 
 ## Available Scripts
 
